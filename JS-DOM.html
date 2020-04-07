@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title> |JS-DOM| </title>
+</head>
+<body>
+	<h3 id="head">Web Technologies</h3>
+
+	<ol id="list">
+		<li>HTML</li>
+		<li>CSS</li>
+	</ol>
+
+<button id="red" onclick="myfunction()">Insert more WT</button>
+<script type="text/javascript">
+	function myfunction(){
+		var txt;
+		var wt=prompt("Enter more WT:");
+		if(wt==null || wt==""){
+			return false;
+		}
+		else{
+			txt="<li>" + wt + "</li>";
+		}
+		document.getElementById("head").style.color='red';
+		document.getElementById("list").innerHTML=txt;
+	}
+</script>
+</body>
+</html>
